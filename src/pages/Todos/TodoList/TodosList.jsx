@@ -25,9 +25,9 @@ export default function TodosList() {
 
   }
   const handleDelete = (items) => {
-    let deleteTodo = documents.filter(todo => todo.id !== items.id);
-    setdocuments(deleteTodo);
-    localStorage.setItem('users', JSON.stringify(deleteTodo));
+    const deleteMethod =documents.filter(doc=>doc.id !== items.id ) 
+    setdocuments(deleteMethod)
+    localStorage.setItem('users',JSON.stringify(deleteMethod))
   }
 
   return (
@@ -64,10 +64,10 @@ export default function TodosList() {
                           <span className='me-3'></span>
                           <Space >
                             <Tooltip placement="topRight" title='Edit' >
-                              <span onClick={()=>{navigate(`/Todos/users/${items.id}`)}}><FontAwesomeIcon icon={faPenToSquare} /></span>
+                              <span onClick={() => { navigate(`/Todos/AddTodo/${items.id}`) }}><FontAwesomeIcon icon={faPenToSquare} /></span>
                             </Tooltip>
                             <Tooltip placement="topRight" title='Delete' >
-                              <span onClick={()=>{handleDelete(items)}}><FontAwesomeIcon icon={faTrash} /></span>
+                              <span onClick={() => { handleDelete(items) }}><FontAwesomeIcon icon={faTrash} /></span>
                             </Tooltip>
                           </Space>
                         </td>
