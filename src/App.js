@@ -3,6 +3,8 @@ import AuthContextProvider, { AuthContext } from 'context/AuthContext';
 import './App.scss';
 import PublicRoutes from 'pages/PublicRoutes';
 
+
+
 function App() {
   return (
     <AuthContextProvider>

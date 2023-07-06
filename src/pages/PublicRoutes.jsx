@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Frontend from './Frontend';
 import Dashboard from './Dashboard';
 import Auth from './Auth';
+import Todos from './Todos';
 import PrivateRoute from 'components/PrivateRoute';
 
 export default function PublicRoutes() {
@@ -12,6 +13,7 @@ export default function PublicRoutes() {
         <Route path='/*' element={<PrivateRoute Component={Frontend} />} />
         <Route path='/Dashboard/*' element={<Dashboard />} />
         <Route path='/Auth/*' element={<Auth />} />
+        <Route path='/Todos/*' element={<Todos />} />
       </Routes>
     </>
   )

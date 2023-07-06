@@ -1,10 +1,10 @@
 import React from 'react'
-import AddTodos from './AddTodos'
+import TodosList from './TodosList'
 
 export default function index() {
   return (
     <>
-      <AddTodos />
+      <TodosList />
     </>
   )
 }

@@ -7,6 +7,7 @@ export default function index() {
     <>
       <Routes>
         <Route path='/Login' element={<Login/>} />
+        <Route path='*' element={<h1 className='text-center mt-5'>404 Page Not Found</h1>} />
       </Routes>
     </>
   )

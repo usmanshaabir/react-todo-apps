@@ -29,6 +29,12 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link to="/Contact" className="nav-link">Contact</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/Todos/AddTodo" className="nav-link">AddTodo</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Todos/TodoList" className="nav-link">TodoList</Link>
+              </li>
             </ul>
             <div className="d-flex">
               {

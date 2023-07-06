@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const onFinish = () => {
     navigate('/');
   };
 
@@ -23,6 +23,7 @@ export default function Login() {
                   wrapperCol={{ span: 16 }}
                   style={{ maxWidth: 600 }}
                   initialValues={{ remember: true }}
+                  onFinish={onFinish} // Updated prop
                 >
                   <Form.Item
                     label="Username"
@@ -59,7 +60,7 @@ export default function Login() {
                   </Form.Item>
 
                   <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                    <Button type="primary" htmlType="submit" onClick={handleSubmit}>
+                    <Button type="primary" htmlType="submit">
                       Submit
                     </Button>
                   </Form.Item>
